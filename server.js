@@ -10,6 +10,8 @@ cron.schedule("0 8-16 * * *" , () => {
     const document = {reportDate: new Date()}
     dateReport.create(document)
     console.log("running a task every hour from 8-4pm")
+}, {
+    timezone: "America/Los_Angeles"
 }) 
 
 app.listen(PORT, () => console.log(`Turning up on port ${PORT}!!`))
